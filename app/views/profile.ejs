@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Simple client</title>
+		<link rel="stylesheet" href="/css/master.css" media="screen">
+	</head>
+	<body>
+		<header>
+			Simple client
+		</header>
+		<div class="container">
+			<div class="center">
+				<div class="title">
+					<%= username %>'s profile
+				</div>
+				<div class="token">
+					<%= token %>
+				</div>
+				<div class="Apps">
+					<ul>
+  						<% apps.forEach(function(app){ %>
+							<li>
+								<%= app.clientId %>
+								<ul>
+									<% app.scope.forEach(function(scope){ %>
+										<li><%= scope %></li>
+									<% }); %>
+								</ul>
+							</li>
+						<% }); %>
+					</ul>
+				</div>
+				<a href="/signout"><div class="button">Signout</div></a>
+			</div>
+		</div>
+		<footer>
+			Made by someone
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Simple client</title>
+		<link rel="stylesheet" href="/css/master.css" media="screen">
+	</head>
+	<body>
+		<header>
+			Simple client
+		</header>
+		<div class="container">
+			<div class="center">
+				<% if (logged) { %>
+					<div class="title">
+						Hello, <%= username %>
+					</div>
+					<a href="/profile"><div class="button">My profile</div></a>
+				<% } else { %>
+					<div class="title">
+						Please take few seconds to signin with Listen!
+					</div>
+					<a href="/listen"><div class="button">Signin with Listen!</div></a>
+				<% } %>
+			</div>
+		</div>
+		<footer>
+			Made by someone
+		</footer>
+	</body>
+</html>
